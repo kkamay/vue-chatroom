@@ -15,18 +15,18 @@ import useLogin from '@/composables/useLogin.js';
 import { MDBInput, MDBBtn } from 'mdb-vue-ui-kit';
 
 export default {
-    setup() {
+    setup(props, context) {
         const email = ref('');
         const password = ref('');
 
         const { error, login } = useLogin();
 
         const submit = async () => {
-          await login(email.value, password.value);
+            await login(email.value, password.value);
 
-          if (!error.value) {
-            console.log('User logged in.');
-          }
+            if (!error.value) {
+                context.emit('login');
+            }
         };
 
         return { email, password, submit, error }

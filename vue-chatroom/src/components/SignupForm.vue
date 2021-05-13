@@ -16,7 +16,7 @@ import useSignup from '@/composables/useSignup.js';
 import { MDBInput, MDBBtn } from 'mdb-vue-ui-kit';
 
 export default {
-    setup() {
+    setup(props, context) {
         const displayName = ref('');
         const email = ref('');
         const password = ref('');
@@ -24,7 +24,11 @@ export default {
         const { error, signup } = useSignup();
 
         const submit = async () => {
-          await signup(email.value, password.value, displayName.value);
+            await signup(email.value, password.value, displayName.value);
+
+            if (!error.value) {
+                context.emit('signup');
+            }
         };
 
         return { displayName, email, password, submit, error }

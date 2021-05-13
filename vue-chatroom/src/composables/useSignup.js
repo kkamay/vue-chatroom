@@ -28,5 +28,4 @@ const useSignup = () => {
     return { error, signup }
 };
 
-
 export default useSignup
