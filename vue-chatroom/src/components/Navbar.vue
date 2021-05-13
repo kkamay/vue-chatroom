@@ -39,4 +39,8 @@ export default {
 h6 {
     margin-bottom: 0px;
 }
+
+strong {
+    color: #1266F1;
+}
 </style>

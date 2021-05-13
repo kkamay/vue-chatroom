@@ -5,7 +5,7 @@
         <MDBInput label="Password" type="password" v-model="password" required class="m-3" />
         <MDBBtn color="success" type="submit" class="m-3">Sign Up</MDBBtn>
         <div class="note note-danger" v-if="error">
-          {{ error }}
+            {{ error }}
         </div>
   </form>
 </template>
