@@ -1,10 +1,10 @@
 <template>
   <form @submit.prevent="submit()">
-        <MDBInput label="Name" type="text" v-model="displayName" required class="m-2" />
-        <MDBInput label="Email" type="email" v-model="email" required class="m-2" />
-        <MDBInput label="Password" type="password" v-model="password" required class="m-2" />
+        <MDBInput label="Name" type="text" v-model="displayName" required class="m-3" />
+        <MDBInput label="Email" type="email" v-model="email" required class="m-3" />
+        <MDBInput label="Password" type="password" v-model="password" required class="m-3" />
         <MDBBtn color="success" type="submit" class="m-3">Sign Up</MDBBtn>
-        <div class="error" v-if="error">
+        <div class="note note-danger" v-if="error">
           {{ error }}
         </div>
   </form>

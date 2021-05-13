@@ -8,7 +8,7 @@
                     <p @click="changeForm()" class="form-text">No account yet? Sign up now!</p>
                 </div>
                 <div v-else>
-                    <h2 class="mb-3">Sign Up</h2>
+                    <h2 class="mb-3">Signup</h2>
                     <SignupForm />
                     <p @click="changeForm()" class="form-text">Already have an account? Log in now!</p>
                 </div>
@@ -50,12 +50,5 @@ body {
 
 .login-signup-form p {
     cursor: pointer;
-}
-
-.error {
-    background-color: #F93154;
-    color: white;
-    margin: 20px;
-    border-left: 10px solid #f38282;
 }
 </style>
