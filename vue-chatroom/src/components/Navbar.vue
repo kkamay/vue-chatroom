@@ -41,6 +41,6 @@ h6 {
 }
 
 strong {
-    color: #1266F1;
+    color: #00b74a;
 }
 </style>
